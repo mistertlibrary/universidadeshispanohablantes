@@ -258,17 +258,17 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
 
     <h3>Portales en inglés</h3>
     <div class="portals">
-      <div class="portal"><a href="https://www.usnews.com/education/best-global-universities/latin-america" target="_blank" rel="noopener">U.S. News: Latin America<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Clasificación regional de universidades. Solo para mirar; no necesitas cuenta.</span></div>
-      <div class="portal"><a href="https://www.usnews.com/education/best-global-universities/spain" target="_blank" rel="noopener">U.S. News: Spain<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Clasificación de universidades de España. Solo para mirar.</span></div>
+      <div class="portal"><a href="https://www.usnews.com/education/best-global-universities/latin-america" target="_blank" rel="noopener">U.S. News: Latin America<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Clasificación regional de universidades. Solo para consultar; no necesitas cuenta.</span></div>
+      <div class="portal"><a href="https://www.usnews.com/education/best-global-universities/spain" target="_blank" rel="noopener">U.S. News: Spain<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Clasificación de universidades de España. Solo para consultar.</span></div>
       <div class="portal"><a href="https://en.wikipedia.org/wiki/Lists_of_universities_and_colleges_by_country" target="_blank" rel="noopener">Wikipedia: universities by country<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Un buen punto de partida para encontrar nombres. No lo cites; ve al sitio de la universidad.</span></div>
-      <div class="portal"><a href="http://sepie.es/internacionalizacion/what-to-study-in-spain.html" target="_blank" rel="noopener">Study in Spain (SEPIE)<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>La agencia oficial de España para estudiantes internacionales, con buscadores de carreras.</span></div>
+      <div class="portal"><a href="http://sepie.es/internacionalizacion/what-to-study-in-spain.html" target="_blank" rel="noopener">Study in Spain (SEPIE)<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>La agencia oficial de España para estudiantes internacionales, con buscadores de programas de estudio.</span></div>
     </div>
 
     <div class="panel ochre">
       <p><strong>¡Cuidado!</strong> Los portales en inglés incluyen universidades que <ruby class="voc">no sirven<rt>don't work</rt></ruby> para esta tarea.</p>
       <ul>
         <li><strong>Brasil:</strong> en Brasil se habla portugués, no español.</li>
-        <li><strong>Puerto Rico:</strong> se habla español, pero es territorio de Estados Unidos. Esta tarea es fuera de Estados Unidos.</li>
+        <li><strong>Puerto Rico:</strong> se habla español, pero es territorio de Estados Unidos. Esta tarea es sobre universidades fuera de Estados Unidos.</li>
       </ul>
     </div>
 
@@ -293,7 +293,7 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
       <h3>¿Cuántos estudiantes hay? Investiga con cuidado.</h3>
       <p>Muchas universidades de América Latina tienen sus propias escuelas secundarias (preparatorias o <ruby class="voc">bachilleratos<rt>high school programs</rt></ruby>). <ruby class="voc">Por eso<rt>that's why</rt></ruby>, a veces el número total de estudiantes incluye a estudiantes de secundaria, como tú.</p>
       <p>Ejemplo: según Wikipedia, la UNAM tiene 372.755 estudiantes, pero más de 100.000 son de bachillerato.</p>
-      <p>Anota tres cosas: el número, el año del <ruby class="voc">dato<rt>figure</rt></ruby> y la <ruby class="voc">fuente<rt>source</rt></ruby>. Después pregunta: ¿incluye este número a estudiantes de secundaria?</p>
+      <p>Anota tres cosas: el número, el año del <ruby class="voc">dato<rt>data point</rt></ruby> y la <ruby class="voc">fuente<rt>source</rt></ruby>. Después pregunta: ¿incluye este número a estudiantes de secundaria?</p>
       <p><ruby class="voc">Ojo<rt>watch out</rt></ruby>: en español, 372.755 es igual a 372,755 en inglés.</p>
     </div>
 
@@ -336,10 +336,10 @@ Los <ruby class="voc">ensayos<rt>rehearsals</rt></ruby> / <ruby class="voc">entr
 Si prefieres ___, tienes que ___.</code>
     </div>
 
-    <p><strong>Una frase que no entiendo:</strong> Copia una frase de la página que no entiendes. Escribe tu mejor idea de lo que significa. No uses un traductor. Está bien no saber todo.</p>
+    <p><strong>Una frase que no entiendo:</strong> Copia una frase de la página que no entiendes. Escribe lo que crees que significa. No uses un traductor. Está bien no saber todo.</p>
 
     <div class="panel">
-      <h3>Cita en MLA</h3>
+      <h3>Cita bibliográfica en MLA</h3>
       <p>Cita la página de la universidad, no el portal. La página es tu evidencia. Llena los <ruby class="voc">campos<rt>fields</rt></ruby>. El sitio <ruby class="voc">arma<rt>builds</rt></ruby> la cita.</p>
       <p class="model">Modelo: “Grupos de Bailes.” <em>Bienestar Estudiantil</em>, Pontificia Universidad Católica Madre y Maestra, bienestar-estudiantil.pucmm.edu.do/arte-y-cultura/bailes/. Accessed 24 Sept. 2026.</p>
     </div>
@@ -504,7 +504,7 @@ function fichaHTML(k){
   f("horario","Un horario")+
   ta("oraciones2","Mis oraciones (algún / ningún, verbos)")+
   f("frase","Una frase que no entiendo")+
-  f("idea","Mi idea de lo que significa")+
+  f("idea","Lo que creo que significa")+
   '<div class="sub">Cita en MLA</div>'+
   f("titulo","Título de la página","Grupos de Bailes")+
   f("sitio","Nombre del sitio web","Bienestar Estudiantil")+
@@ -566,7 +566,7 @@ function compile(){
     L.push("Regla o requisito: " + v(k+"-regla"));
     L.push("Horario: " + v(k+"-horario"));
     L.push("Oraciones (algún / ningún, verbos): " + v(k+"-oraciones2"));
-    L.push("Frase que no entiendo: " + v(k+"-frase") + "  Mi idea: " + v(k+"-idea"));
+    L.push("Frase que no entiendo: " + v(k+"-frase") + "  Lo que creo: " + v(k+"-idea"));
   });
   L.push("", "COMPARACIÓN", v("comparaciones"), v("prefiero"));
   if(v("extra")) L.push("", "TRABAJO EXTRA", v("extra"));
