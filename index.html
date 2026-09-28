@@ -12,18 +12,18 @@
 <link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
 <script>
-(function(){try{var d=document.documentElement,t=localStorage.getItem("lyceum-theme"),s=localStorage.getItem("lyceum-size"),f=localStorage.getItem("lyceum-font");if(t==="dark"||t==="contrast")d.dataset.theme=t;if(s==="small"||s==="large")d.dataset.size=s;if(f==="sans"||f==="dyslexic")d.dataset.font=f}catch(e){}})();
+(function(){try{var d=document.documentElement,t=localStorage.getItem("lyceum-theme"),s=localStorage.getItem("lyceum-size"),f=localStorage.getItem("lyceum-font");if(t==="dark"||t==="contrast")d.dataset.theme=t;if(s==="small"||s==="large")d.dataset.size=s;if(f==="sans"||f==="dyslexic")d.dataset.font=f;if(localStorage.getItem("universidades-vocab")==="on")d.dataset.vocab="on"}catch(e){}})();
 </script>
 <style>
-@font-face{font-family:"Archivo";font-style:normal;font-weight:100 900;font-display:swap;src:url("fonts/archivo-latin-wght-normal.woff2") format("woff2")}
-@font-face{font-family:"Archivo";font-style:italic;font-weight:100 900;font-display:swap;src:url("fonts/archivo-latin-wght-italic.woff2") format("woff2")}
-@font-face{font-family:"Alegreya";font-style:normal;font-weight:400 900;font-display:swap;src:url("fonts/alegreya-latin-wght-normal.woff2") format("woff2")}
-@font-face{font-family:"Alegreya";font-style:italic;font-weight:400 900;font-display:swap;src:url("fonts/alegreya-latin-wght-italic.woff2") format("woff2")}
+@font-face{font-family:"Archivo";font-style:normal;font-weight:100 900;font-display:swap;src:url("archivo-latin-wght-normal.woff2") format("woff2")}
+@font-face{font-family:"Archivo";font-style:italic;font-weight:100 900;font-display:swap;src:url("archivo-latin-wght-italic.woff2") format("woff2")}
+@font-face{font-family:"Alegreya";font-style:normal;font-weight:400 900;font-display:swap;src:url("alegreya-latin-wght-normal.woff2") format("woff2")}
+@font-face{font-family:"Alegreya";font-style:italic;font-weight:400 900;font-display:swap;src:url("alegreya-latin-wght-italic.woff2") format("woff2")}
 @font-face{font-family:"OpenDyslexic";font-weight:400;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-400.woff2") format("woff2")}
 @font-face{font-family:"OpenDyslexic";font-weight:700;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-700.woff2") format("woff2")}
 
 :root{
-  --paper:#ecebe6; --card:#f8f7f3; --field:#fdfcfa; --ink:#1b1d1c; --muted:#555a56; --line:#cbc9c1;
+  --paper:#f7f6f2; --card:#ffffff; --field:#ffffff; --ink:#1b1d1c; --muted:#555a56; --line:#dcdad3;
   --basalt:#1b1d1c; --basalt-ink:#ecebe6;
   --jade:#1f6b57; --jade-ink:#17594a; --jade-soft:#dcebe5;
   --ochre:#c28a2a; --ochre-ink:#855710; --ochre-soft:#f3e7cf;
@@ -70,22 +70,22 @@ ol,ul{margin:0;padding-left:1.3em;display:grid;gap:.3rem}
 .topbar a{color:var(--basalt-ink);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
 
 /* Geometric banding: header and section breaks only */
-.banda{height:14px;background:
+.banda{height:8px;background:
   linear-gradient(90deg,var(--jade) 0 25%,var(--ochre) 25% 37.5%,var(--basalt-ink) 37.5% 50%,var(--jade) 50% 62.5%,var(--basalt) 62.5% 75%,var(--ochre) 75% 100%);
-  background-size:128px 100%;border-block:2px solid var(--basalt)}
+  background-size:128px 100%}
 [data-theme="contrast"] .banda{background:var(--ink);height:3px;border:0}
 
-.hero{background:var(--basalt);color:var(--basalt-ink);text-align:center;padding:3.4rem 1.2rem 3rem}
+.hero{background:var(--paper);color:var(--ink);text-align:center;padding:3rem 1.2rem 2.6rem}
 .hero-inner{max-width:44rem;margin:0 auto;display:grid;gap:1rem}
-.kicker{font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ochre)}
+.kicker{font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ochre-ink)}
 [data-theme="contrast"] .kicker{color:#ffd54a}
 .hero h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:800;letter-spacing:-.01em;line-height:1.02}
 .hero h1 span{display:block;font-weight:300;font-size:.62em;letter-spacing:.01em;margin-top:.2rem}
-.hero .q{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.45rem);max-width:34ch;justify-self:center;line-height:1.35}
-.hero .intro{font-size:.95rem;max-width:58ch;justify-self:center;opacity:.92}
+.hero .q{color:var(--jade-ink);font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.45rem);max-width:34ch;justify-self:center;line-height:1.35}
+.hero .intro{font-size:.95rem;max-width:58ch;justify-self:center}
 
 .map{position:sticky;top:0;z-index:12;background:var(--card);border-bottom:1px solid var(--line);font-family:var(--sans);font-size:.74rem}
-.map ol{list-style:none;margin:0 auto;padding:.65rem 1rem;display:flex;gap:.3rem 1.4rem;justify-content:center;flex-wrap:wrap;max-width:70rem}
+.map ol{list-style:none;margin:0 auto;padding:.65rem 1rem;display:flex;align-items:center;gap:.3rem 1.4rem;justify-content:center;flex-wrap:wrap;max-width:70rem}
 .map a{color:var(--ink);text-decoration:none;font-weight:600;letter-spacing:.03em}
 .map a:hover{color:var(--jade-ink)}
 
@@ -98,20 +98,22 @@ main{display:block}
 .chapter h3{font-size:1.1rem;font-weight:700;letter-spacing:.01em}
 .lead{text-align:center;max-width:58ch;justify-self:center}
 
-/* English help */
-.en{position:relative;display:block;padding-right:2rem}
-.en::before{content:"EN";position:absolute;right:0;top:.15rem;font:700 .6rem/1 var(--sans);letter-spacing:.06em;color:var(--jade-ink);border:1px solid var(--jade-ink);padding:.2rem .25rem}
-.en:hover::after,.en:focus::after{content:attr(data-en);position:absolute;z-index:25;left:0;right:0;top:calc(100% + .4rem);background:var(--tip);color:var(--tip-ink);font:.82rem/1.45 var(--sans);font-style:normal;text-align:left;letter-spacing:0;text-transform:none;padding:.7rem .85rem;white-space:pre-line;box-shadow:0 6px 18px rgb(0 0 0 / .22)}
-.hero .en::before{color:var(--ochre);border-color:var(--ochre)}
-.help{font-family:var(--sans);font-size:.78rem;color:var(--muted);text-align:center}
-.hero .help{color:var(--basalt-ink);opacity:.75}
 
+/* Vocabulary toggle */
+ruby.voc{ruby-position:over;ruby-align:center;text-decoration:underline dotted var(--jade);text-decoration-thickness:1px;text-underline-offset:.28em}
+ruby.voc rt{display:none;font:600 .6em/1 var(--sans);letter-spacing:.02em;color:var(--jade-ink);font-style:normal;text-transform:none;white-space:nowrap;text-align:center}
+[data-vocab="on"] ruby.voc rt{display:ruby-text}
+[data-vocab="on"] ruby.voc{background:var(--jade-soft);text-decoration:none;padding:0 .12em}
+[data-vocab="on"] main p,[data-vocab="on"] main li,[data-vocab="on"] .hero p{line-height:2.1}
+.vocab-btn{font:700 .72rem var(--sans);letter-spacing:.05em;border:1px solid var(--jade);background:transparent;color:var(--jade-ink);padding:.25rem .7rem;border-radius:999px;cursor:pointer}
+.vocab-btn[aria-pressed="true"]{background:var(--jade);color:var(--card)}
+[data-theme="contrast"] .vocab-btn[aria-pressed="true"]{color:#000}
 .steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:.5rem}
 .steps li{counter-increment:s;position:relative;padding-left:2.4rem;min-height:1.6rem}
 .steps li::before{content:counter(s);position:absolute;left:0;top:.05rem;font:700 .85rem var(--sans);color:var(--basalt-ink);background:var(--jade);width:1.6rem;height:1.6rem;display:grid;place-items:center}
 [data-theme="contrast"] .steps li::before{color:#000}
 
-.panel{border:2px solid var(--basalt);background:var(--card);padding:1.1rem 1.2rem;display:grid;gap:.6rem}
+.panel{border:1px solid var(--line);background:var(--card);padding:1.1rem 1.2rem;display:grid;gap:.6rem}
 .chapter:nth-of-type(even) .panel{background:var(--paper)}
 .panel.ochre,.chapter .panel.ochre{border-color:var(--ochre);background:var(--ochre-soft)}
 .panel.jade,.chapter .panel.jade{border-color:var(--jade);background:var(--jade-soft)}
@@ -126,24 +128,24 @@ main{display:block}
 .portal span{font-size:.85rem;color:var(--muted)}
 
 /* Directorio: the starter list as a campus directory board */
-.directorio{background:var(--basalt);color:var(--basalt-ink);padding:1rem;display:grid;gap:.8rem}
-.directorio h3{color:var(--basalt-ink)}
+.directorio{background:var(--card);color:var(--ink);border:1px solid var(--line);border-top:5px solid var(--jade);padding:1rem;display:grid;gap:.8rem}
+.directorio h3{color:var(--ink)}
 .filters{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
-.filters button{font:600 .78rem var(--sans);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--basalt-ink);background:transparent;color:var(--basalt-ink);padding:.4rem .8rem;cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ochre);border-color:var(--ochre);color:#1b1d1c}
+.filters button{font:600 .78rem var(--sans);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--jade);background:transparent;color:var(--jade-ink);padding:.4rem .8rem;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--jade);border-color:var(--jade);color:var(--card)}
 [data-theme="contrast"] .filters button[aria-pressed="true"]{color:#000}
 .tablewrap{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:.84rem}
 th,td{text-align:left;padding:.55rem .6rem;vertical-align:top}
-.directorio th{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre);border-bottom:2px solid var(--ochre)}
+.directorio th{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ochre-ink);border-bottom:2px solid var(--ochre)}
 [data-theme="contrast"] .directorio th{color:#ffd54a;border-color:#ffd54a}
-.directorio td{border-bottom:1px solid rgba(255,255,255,.16)}
+.directorio td{border-bottom:1px solid var(--line)}
 .directorio td:first-child{font-weight:700}
-.directorio a{color:var(--basalt-ink)}
+.directorio a{color:var(--jade-ink)}
 .directorio .links{display:grid;gap:.15rem}
 .tag{display:inline-block;font:700 .64rem var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:.1rem .4rem;margin:.1rem .2rem .1rem 0;border:1px solid currentColor}
-.tag.ext{color:var(--ochre)}
-.directorio .help{color:var(--basalt-ink);opacity:.8}
+.tag.ext{color:var(--ochre-ink)}
+.directorio .help{color:var(--muted)}
 
 .chips{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center}
 .chips span{font:600 .8rem var(--sans);border:1px solid var(--jade);color:var(--jade-ink);padding:.25rem .7rem}
@@ -152,8 +154,8 @@ th,td{text-align:left;padding:.55rem .6rem;vertical-align:top}
 
 /* Fichas */
 .fichas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.4rem}
-fieldset.ficha{border:2px solid var(--basalt);background:var(--card);margin:0;padding:0 1rem 1.1rem;display:grid;gap:.7rem;min-width:0}
-fieldset.ficha legend{font:800 .9rem var(--display);letter-spacing:.1em;text-transform:uppercase;background:var(--basalt);color:var(--basalt-ink);padding:.35rem .8rem;margin-left:-1rem}
+fieldset.ficha{border:1px solid var(--line);border-top:5px solid var(--jade);background:var(--card);margin:0;padding:0 1rem 1.1rem;display:grid;gap:.7rem;min-width:0}
+fieldset.ficha legend{font:800 .9rem var(--display);letter-spacing:.1em;text-transform:uppercase;background:var(--jade-soft);color:var(--jade-ink);padding:.35rem .8rem;margin-left:-.4rem}
 .sub{font:700 .68rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ochre-ink);padding-top:.5rem;border-top:1px solid var(--line)}
 label{display:grid;gap:.2rem;font-family:var(--sans);font-size:.8rem;font-weight:600}
 input,select,textarea{font:.95rem/1.4 var(--serif);color:var(--ink);background:var(--field);border:1px solid var(--line);border-bottom:2px solid var(--muted);padding:.45rem .55rem;width:100%;border-radius:0}
@@ -162,9 +164,9 @@ textarea{min-height:5.5rem;resize:vertical}
 .cite{background:var(--field);border:1px dashed var(--line);padding:.6rem .7rem .6rem 2.2rem;text-indent:-1.6rem;font-size:.92rem;min-height:2.6em;overflow-wrap:anywhere}
 
 /* Comparación */
-.compare{border:2px solid var(--basalt)}
+.compare{border:1px solid var(--line);background:var(--card)}
 .compare th,.compare td{border-bottom:1px solid var(--line)}
-.compare thead th{background:var(--basalt);color:var(--basalt-ink);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.compare thead th{background:var(--jade-soft);color:var(--jade-ink);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
 .compare tbody th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:28%}
 .compare td{font-family:var(--serif);font-size:.95rem}
 
@@ -177,12 +179,12 @@ textarea{min-height:5.5rem;resize:vertical}
 #fallback{display:grid;gap:.4rem}
 #fallback textarea{min-height:11rem;font:.8rem var(--mono)}
 
-footer{background:var(--basalt);color:var(--basalt-ink);text-align:center;font-family:var(--sans);font-size:.78rem;padding:2.5rem 1rem 5rem;display:grid;gap:.4rem}
-footer a{color:var(--basalt-ink)}
+footer{background:var(--card);color:var(--ink);border-top:1px solid var(--line);text-align:center;font-family:var(--sans);font-size:.78rem;padding:2.5rem 1rem 5rem;display:grid;gap:.4rem}
+footer a{color:var(--jade-ink)}
 footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
 
 /* Accessibility panel (shared Lyceum pattern) */
-.a11y-toggle{position:fixed;right:1rem;bottom:1rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:2px solid var(--basalt-ink);background:var(--jade);color:#fff;font-family:var(--serif);font-size:1.15rem;font-weight:700;cursor:pointer}
+.a11y-toggle{position:fixed;right:1rem;bottom:1rem;z-index:20;width:3rem;height:3rem;border-radius:50%;border:2px solid var(--card);background:var(--jade);color:#fff;font-family:var(--serif);font-size:1.15rem;font-weight:700;cursor:pointer}
 [data-theme="contrast"] .a11y-toggle{color:#000}
 .a11y-panel{position:fixed;right:1rem;bottom:4.6rem;z-index:20;width:16.5rem;max-width:calc(100vw - 2rem);background:var(--card);color:var(--ink);border:2px solid var(--ink);padding:1rem;font-family:"Archivo",system-ui,sans-serif;font-size:14px}
 .a11y-panel[hidden]{display:none}
@@ -210,9 +212,9 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
   <div class="hero-inner">
     <p class="kicker">Español 2 · Una investigación en dos días</p>
     <h1>Explorando Universidades <span>Hispanohablantes</span></h1>
-    <p class="q en" tabindex="0" data-en="Where in the Spanish-speaking world can I study and keep doing my favorite activity?">¿Dónde puedo estudiar en el mundo hispanohablante y seguir con mi actividad favorita?</p>
-    <p class="intro en" tabindex="0" data-en="You will look for two universities in Spanish-speaking countries. Both must offer your extracurricular activity. First you search in English. Then you read the universities' own pages in Spanish. Finally, you compare the two in Spanish.">Vas a buscar dos universidades en países hispanohablantes. Las dos deben tener tu actividad extracurricular: un deporte, un club, música, teatro o arte. Primero buscas en inglés. Después lees las páginas de las universidades en español. Al final, comparas las dos universidades en español.</p>
-    <p class="help">Pasa el cursor (o toca) sobre cualquier texto con EN para ver ayuda en inglés.</p>
+    <p class="q">¿Dónde puedo estudiar en el <ruby class="voc">mundo hispanohablante<rt>Spanish-speaking world</rt></ruby> y <ruby class="voc">seguir<rt>to keep on</rt></ruby> con mi actividad favorita?</p>
+    <p class="intro">Vas a <ruby class="voc">buscar<rt>to look for</rt></ruby> dos universidades en países hispanohablantes. Las dos deben tener tu actividad extracurricular: un deporte, un club, música, teatro o arte. Primero buscas en inglés. Después lees las páginas de las universidades en español. Al final, comparas las dos universidades en español.</p>
+    <p class="help">¿Necesitas ayuda con una palabra? Usa el botón <strong>Vocabulario</strong>.</p>
   </div>
 </header>
 <div class="banda" aria-hidden="true"></div>
@@ -225,6 +227,7 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
     <li><a href="#comparar">3 · Comparar</a></li>
     <li><a href="#extensiones">Extensiones</a></li>
     <li><a href="#entregar">Entregar</a></li>
+    <li><button type="button" class="vocab-btn" id="vocabBtn" aria-pressed="false">Vocabulario: EN</button></li>
   </ol>
 </nav>
 
@@ -234,7 +237,7 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
   <div class="wrap">
     <p class="chap-num">Antes de empezar</p>
     <h2 id="plan-h">Plan de dos días</h2>
-    <p class="lead en" tabindex="0" data-en="Day 1: Discover and start researching.&#10;Day 2: Finish researching, compare, and turn in.&#10;Your work saves automatically on this computer. Use the same computer both days.">Día 1: Descubrir y empezar a investigar.<br>Día 2: Terminar de investigar, comparar y entregar.<br>Tu trabajo se guarda automáticamente en esta computadora. Usa la misma computadora los dos días.</p>
+    <p class="lead">Día 1: Descubrir y empezar a investigar.<br>Día 2: Terminar de investigar, comparar y entregar.<br>Tu trabajo <ruby class="voc">se guarda<rt>is saved</rt></ruby> automáticamente en esta computadora. Usa la misma computadora los dos días.</p>
     <label for="actividad">Mi actividad
       <input id="actividad" data-save placeholder="el fútbol, el coro, el teatro, el ajedrez…">
     </label>
@@ -245,12 +248,12 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
   <div class="wrap">
     <p class="chap-num">Paso 1 · Día 1</p>
     <h2 id="p1-h">Descubrir</h2>
-    <ol class="steps en" tabindex="0" data-en="Choose your activity. Use the starter list or search an English-language portal. Pick two universities. Record name, city, country, public or private, and number of students. Write two or three sentences using ser and tener.">
-      <li>Escoge tu actividad.</li>
-      <li>Mira la lista de universidades o busca en un portal en inglés.</li>
+    <ol class="steps">
+      <li><ruby class="voc">Escoge<rt>choose</rt></ruby> tu actividad.</li>
+      <li>Mira la lista de universidades o busca en un <ruby class="voc">portal<rt>website</rt></ruby> en inglés.</li>
       <li>Escoge dos universidades.</li>
-      <li>Para cada universidad, anota: nombre, ciudad, país, pública o privada, y número de estudiantes.</li>
-      <li>Escribe dos o tres oraciones con <em>ser</em> y <em>tener</em>.</li>
+      <li>Para cada universidad, <ruby class="voc">anota<rt>write down</rt></ruby>: nombre, ciudad, país, <ruby class="voc">pública o privada<rt>public or private</rt></ruby>, y número de estudiantes.</li>
+      <li>Escribe dos o tres <ruby class="voc">oraciones<rt>sentences</rt></ruby> con <em>ser</em> y <em>tener</em>.</li>
     </ol>
 
     <h3>Portales en inglés</h3>
@@ -261,11 +264,11 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
       <div class="portal"><a href="http://sepie.es/internacionalizacion/what-to-study-in-spain.html" target="_blank" rel="noopener">Study in Spain (SEPIE)<span class="visually-hidden"> (se abre en otra pestaña)</span></a><span>Spain's official agency for international education, with degree search tools.</span></div>
     </div>
 
-    <div class="panel ochre en" tabindex="0" data-en="Careful! English portals list schools that don't fit this assignment. Brazil speaks Portuguese. Puerto Rico is Spanish-speaking but is a U.S. territory, and this assignment is outside the U.S.">
-      <p><strong>¡Cuidado!</strong> Los portales en inglés incluyen universidades que no sirven para esta tarea.</p>
+    <div class="panel ochre">
+      <p><strong>¡Cuidado!</strong> Los portales en inglés incluyen universidades que <ruby class="voc">no sirven<rt>don't work</rt></ruby> para esta tarea.</p>
       <ul>
         <li><strong>Brasil:</strong> en Brasil se habla portugués, no español.</li>
-        <li><strong>Puerto Rico:</strong> se habla español, pero es territorio de Estados Unidos. Esta tarea es fuera de Estados Unidos.</li>
+        <li><strong>Puerto Rico:</strong> se habla español, pero es <ruby class="voc">territorio<rt>territory</rt></ruby> de Estados Unidos. Esta tarea es fuera de Estados Unidos.</li>
       </ul>
     </div>
 
@@ -286,15 +289,15 @@ footer .big{font-family:var(--serif);font-size:1.3rem;font-style:italic}
       <p class="help"><span class="tag ext">Extensión</span> = más difícil de navegar. Buena opción para el trabajo extra.</p>
     </div>
 
-    <div class="panel ochre en" tabindex="0" data-en="How many students? Many Latin American universities run their own high schools, so a total can include high school students like you. Example: Wikipedia lists UNAM at 372,755 students, but over 100,000 are high school students. Record the number, the year, and the source, then ask whether the number includes high school students. Note: Spanish uses a period where English uses a comma in large numbers.">
+    <div class="panel ochre">
       <h3>¿Cuántos estudiantes hay? Investiga con cuidado.</h3>
-      <p>Muchas universidades de América Latina tienen sus propias escuelas secundarias (preparatorias o bachilleratos). Por eso, a veces el número total de estudiantes incluye a estudiantes de secundaria, como tú.</p>
+      <p>Muchas universidades de América Latina tienen sus propias <ruby class="voc">escuelas secundarias<rt>high schools</rt></ruby> (preparatorias o <ruby class="voc">bachilleratos<rt>high school programs</rt></ruby>). Por eso, a veces el número total de estudiantes incluye a estudiantes de secundaria, como tú.</p>
       <p>Ejemplo: según Wikipedia, la UNAM tiene 372.755 estudiantes, pero más de 100.000 son de bachillerato.</p>
-      <p>Anota tres cosas: el número, el año del dato y la fuente. Después pregunta: ¿incluye este número a estudiantes de secundaria?</p>
+      <p>Anota tres cosas: el número, el año del dato y la <ruby class="voc">fuente<rt>source</rt></ruby>. Después pregunta: ¿<ruby class="voc">incluye<rt>includes</rt></ruby> este número a estudiantes de secundaria?</p>
       <p>Ojo: en español, 372.755 es igual a 372,755 en inglés.</p>
     </div>
 
-    <div class="panel jade frames en" tabindex="0" data-en="The university is ___. It is in ___ (city), ___ (country). According to ___ (year), it has more than ___ university students. Remember: universidad is feminine, so adjectives end in -a.">
+    <div class="panel jade frames">
       <h3>Modelos: ser y tener</h3>
       <code>La universidad es ___ (grande / pública / privada / antigua / moderna).
 La universidad está en ___, ___.
@@ -310,20 +313,20 @@ Según ___ (año), la universidad tiene más de ___ estudiantes universitarios.<
   <div class="wrap">
     <p class="chap-num">Paso 2 · Días 1 y 2</p>
     <h2 id="p2-h">Investigar</h2>
-    <ol class="steps en" tabindex="0" data-en="Go to each university's official page in Spanish. Find the sports, culture, or student life section. Does it have your activity? Find one rule or requirement (a tryout, audition, form, insurance, limited spots). Find one schedule detail. Copy the page's URL.">
-      <li>Ve a la página oficial de cada universidad, en español. Busca la sección de deportes, cultura o vida estudiantil.</li>
+    <ol class="steps">
+      <li>Ve a la <ruby class="voc">página oficial<rt>official page</rt></ruby> de cada universidad, en español. Busca la sección de deportes, cultura o vida estudiantil.</li>
       <li>¿Tiene tu actividad? Sí o no.</li>
-      <li>Busca una regla o un requisito. Por ejemplo: una prueba, una audición, un formulario, un seguro o cupos limitados.</li>
-      <li>Busca un horario: días, horas o fechas.</li>
+      <li>Busca una regla o un <ruby class="voc">requisito<rt>requirement</rt></ruby>. Por ejemplo: una <ruby class="voc">prueba<rt>tryout</rt></ruby>, una <ruby class="voc">audición<rt>audition</rt></ruby>, un <ruby class="voc">formulario<rt>form</rt></ruby>, un <ruby class="voc">seguro<rt>insurance</rt></ruby> o <ruby class="voc">cupos limitados<rt>limited spots</rt></ruby>.</li>
+      <li>Busca un <ruby class="voc">horario<rt>schedule</rt></ruby>: días, horas o fechas.</li>
       <li>Copia la dirección web (URL) de la página.</li>
     </ol>
 
     <h3>¿Dónde buscar?</h3>
-    <div class="chips en" tabindex="0" data-en="Sports · Culture · Arts and Culture · Student Life · Student Wellbeing · Student Groups · Varsity teams · Workshops · Schedules · Tryouts and requirements">
+    <div class="chips">
       <span>Deportes</span><span>Cultura</span><span>Arte y Cultura</span><span>Vida Estudiantil</span><span>Bienestar Estudiantil</span><span>Grupos Estudiantiles</span><span>Selecciones</span><span>Talleres</span><span>Horarios</span><span>Pruebas y requisitos</span>
     </div>
 
-    <div class="panel jade frames en" tabindex="0" data-en="There are some rules. There is no ___. Someone who wants to play needs ___. Students can ___. Rehearsals / practices start at ___. If you prefer ___, you have to ___.">
+    <div class="panel jade frames">
       <h3>Modelos: palabras afirmativas y negativas; verbos</h3>
       <code>Hay algunas reglas: ___.
 No hay ninguna ___.
@@ -333,11 +336,11 @@ Los ensayos / entrenamientos empiezan a las ___.
 Si prefieres ___, tienes que ___.</code>
     </div>
 
-    <p class="en" tabindex="0" data-en="Copy one phrase from the page you don't understand. Write your best guess at its meaning without a translator. It's fine not to know everything."><strong>Una frase que no entiendo:</strong> Copia una frase de la página que no entiendes. Escribe tu mejor idea de lo que significa. No uses un traductor. Está bien no saber todo.</p>
+    <p><strong>Una frase que no entiendo:</strong> Copia una frase de la página que no <ruby class="voc">entiendes<rt>you understand</rt></ruby>. Escribe tu mejor idea de lo que significa. No uses un <ruby class="voc">traductor<rt>translator</rt></ruby>. Está bien no saber todo.</p>
 
-    <div class="panel en" tabindex="0" data-en="Cite the university page, not the portal: the page is your evidence. Fill in the fields and the site builds the citation.">
+    <div class="panel">
       <h3>Cita en MLA</h3>
-      <p>Cita la página de la universidad, no el portal. La página es tu evidencia. Llena los campos. El sitio arma la cita.</p>
+      <p>Cita la página de la universidad, no el portal. La página es tu <ruby class="voc">evidencia<rt>evidence</rt></ruby>. Llena los <ruby class="voc">campos<rt>fields</rt></ruby>. El sitio <ruby class="voc">arma<rt>builds</rt></ruby> la cita.</p>
       <p class="model">Modelo: “Grupos de Bailes.” <em>Bienestar Estudiantil</em>, Pontificia Universidad Católica Madre y Maestra, bienestar-estudiantil.pucmm.edu.do/arte-y-cultura/bailes/. Accessed 24 Sept. 2026.</p>
     </div>
 
@@ -349,14 +352,14 @@ Si prefieres ___, tienes que ___.</code>
   <div class="wrap">
     <p class="chap-num">Paso 3 · Día 2</p>
     <h2 id="p3-h">Comparar</h2>
-    <p class="lead en" tabindex="0" data-en="Fill in the table from your two fichas. Then write four comparison sentences and one final sentence.">La tabla se llena con la información de tus dos fichas. Después escribe cuatro oraciones de comparación y una oración final.</p>
+    <p class="lead">La tabla <ruby class="voc">se llena<rt>fills in</rt></ruby> con la información de tus dos fichas. Después escribe cuatro oraciones de <ruby class="voc">comparación<rt>comparison</rt></ruby> y una oración final.</p>
     <div class="tablewrap">
       <table class="compare">
         <thead><tr><th scope="col"><span class="visually-hidden">Dato</span></th><th scope="col" id="thA">Universidad A</th><th scope="col" id="thB">Universidad B</th></tr></thead>
         <tbody id="comp"></tbody>
       </table>
     </div>
-    <div class="panel jade frames en" tabindex="0" data-en="___ is bigger than ___. ___ has fewer students than ___. ___ is as ___ as ___. ___ has as many activities as ___. I prefer ___ because ___.">
+    <div class="panel jade frames">
       <h3>Modelos: comparaciones</h3>
       <code>La ___ es más grande que la ___.
 La ___ tiene menos estudiantes que la ___.
@@ -379,8 +382,8 @@ Prefiero la ___ porque ___.</code>
   <div class="wrap">
     <p class="chap-num">Opcional</p>
     <h2 id="ext-h">Extensiones</h2>
-    <ul class="en" tabindex="0" data-en="Add a third university. Visit a country's official study portal in Spanish. Replace a model sentence with your own. Found a different enrollment number in another source? Compare the sources and explain the difference.">
-      <li>Añade una tercera universidad.</li>
+    <ul>
+      <li><ruby class="voc">Añade<rt>add</rt></ruby> una tercera universidad.</li>
       <li>Visita el portal oficial de un país, en español. Por ejemplo: <a href="http://estudiarenargentina.siu.edu.ar/" target="_blank" rel="noopener">Estudiar en Argentina<span class="visually-hidden"> (se abre en otra pestaña)</span></a>.</li>
       <li>Cambia una oración modelo por una oración original.</li>
       <li>¿Encontraste otro número de estudiantes en otra fuente? Compara las dos fuentes. ¿Por qué son diferentes?</li>
@@ -395,7 +398,7 @@ Prefiero la ___ porque ___.</code>
   <div class="wrap">
     <p class="chap-num no-print">Al final</p>
     <h2 id="ent-h">Entregar</h2>
-    <p class="lead en no-print" tabindex="0" data-en="Check your two fichas, your comparison, and your citations. Then copy everything and turn it in the way your teacher says.">Revisa tus dos fichas, tu comparación y tus citas. Después copia todo y entrégalo como dice tu profesor.</p>
+    <p class="lead no-print"><ruby class="voc">Revisa<rt>check</rt></ruby> tus dos fichas, tu comparación y tus citas. Después copia todo y <ruby class="voc">entrégalo<rt>turn it in</rt></ruby> como dice tu profesor.</p>
     <label class="no-print" for="nombre">Mi nombre
       <input id="nombre" data-save>
     </label>
@@ -435,6 +438,10 @@ var t=document.querySelector(".a11y-toggle"),p=document.getElementById("a11y-pan
 function close(){p.hidden=true;t.setAttribute("aria-expanded","false")}
 t.addEventListener("click",function(){p.hidden=!p.hidden;t.setAttribute("aria-expanded",String(!p.hidden));if(!p.hidden)p.querySelector("button").focus()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!p.hidden){close();t.focus()}});
+var vb=document.getElementById("vocabBtn");
+function vsync(){vb.setAttribute("aria-pressed",String(d.dataset.vocab==="on"))}
+vb.addEventListener("click",function(){if(d.dataset.vocab==="on"){delete d.dataset.vocab}else{d.dataset.vocab="on"}try{localStorage.setItem("universidades-vocab",d.dataset.vocab==="on"?"on":"off")}catch(e){}vsync()});
+vsync();
 sync();
 })();
 </script>
