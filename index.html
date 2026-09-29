@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Explorando Universidades Hispanohablantes | WEHS Library Lyceum</title>
-<meta name="description" content="A two-day Spanish 2 research activity: find two universities in the Spanish-speaking world that offer your extracurricular, build fichas with MLA citations, and compare them in Spanish.">
+<meta name="description" content="A two-day Spanish 2 research activity: find two universities in the Spanish-speaking world that offer your extracurricular, build reports (informes) with MLA citations, and compare them in Spanish.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WEHS Library Lyceum">
 <meta property="og:title" content="Explorando Universidades Hispanohablantes">
@@ -352,7 +352,7 @@ Si prefieres ___, tienes que ___.</code>
   <div class="wrap">
     <p class="chap-num">Paso 3 · Día 2</p>
     <h2 id="p3-h">Comparar</h2>
-    <p class="lead">La tabla <ruby class="voc">se llena<rt>fills in</rt></ruby> con la información de tus dos fichas. Después escribe cuatro oraciones de comparación y una oración final.</p>
+    <p class="lead">La tabla <ruby class="voc">se llena<rt>fills in</rt></ruby> con la información de tus dos informes. Después escribe cuatro oraciones de comparación y una oración final.</p>
     <div class="tablewrap">
       <table class="compare">
         <thead><tr><th scope="col"><span class="visually-hidden">Dato</span></th><th scope="col" id="thA">Universidad A</th><th scope="col" id="thB">Universidad B</th></tr></thead>
@@ -398,7 +398,7 @@ Prefiero la ___ porque ___.</code>
   <div class="wrap">
     <p class="chap-num no-print">Al final</p>
     <h2 id="ent-h">Entregar</h2>
-    <p class="lead no-print">Revisa tus dos fichas, tu comparación y tus citas. Después copia todo y <ruby class="voc">entrégalo<rt>turn it in</rt></ruby> como dice el Señor Sheehan.</p>
+    <p class="lead no-print">Revisa tus dos informes, tu comparación y tus citas. Después copia todo y <ruby class="voc">entrégalo<rt>turn it in</rt></ruby> como dice el Señor Sheehan.</p>
     <label class="no-print" for="nombre">Mi nombre
       <input id="nombre" data-save>
     </label>
@@ -488,7 +488,7 @@ function fichaHTML(k){
   function f(id,lab,ph){ return '<label for="'+k+'-'+id+'">'+lab+'<input id="'+k+'-'+id+'" data-save placeholder="'+(ph||"")+'"></label>'; }
   function ta(id,lab){ return '<label for="'+k+'-'+id+'">'+lab+'<textarea id="'+k+'-'+id+'" data-save></textarea></label>'; }
   function sel(id,lab,opts){ return '<label for="'+k+'-'+id+'">'+lab+'<select id="'+k+'-'+id+'" data-save><option value=""></option>'+opts.map(function(o){return "<option>"+o+"</option>";}).join("")+'</select></label>'; }
-  return '<fieldset class="ficha"><legend>Ficha '+k+'</legend>'+
+  return '<fieldset class="ficha"><legend>Informe '+k+'</legend>'+
   '<div class="sub">Paso 1: Datos</div>'+
   f("nombre","Nombre de la universidad")+
   '<div class="row">'+f("ciudad","Ciudad")+f("pais","País")+'</div>'+
@@ -557,7 +557,7 @@ function compile(){
   if(v("nombre")) L.push("Nombre: " + v("nombre"));
   if(v("actividad")) L.push("Mi actividad: " + v("actividad"));
   ["A","B"].forEach(function(k){
-    L.push("", "FICHA " + k + ": " + (v(k+"-nombre") || "(sin nombre)"));
+    L.push("", "INFORME " + k + ": " + (v(k+"-nombre") || "(sin nombre)"));
     L.push("Ciudad, país: " + v(k+"-ciudad") + ", " + v(k+"-pais"));
     L.push("Tipo: " + v(k+"-tipo"));
     L.push("Estudiantes: " + v(k+"-estudiantes") + " (año: " + v(k+"-anio") + "; fuente: " + v(k+"-fuente") + "; incluye secundaria: " + v(k+"-secundaria") + ")");
