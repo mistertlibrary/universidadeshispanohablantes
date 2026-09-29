@@ -1,0 +1,22 @@
+{
+  "lyceum": 1,
+  "_note": "Generated for the Lyceum hub's unified search. Section titles are the guide's own headings. 'keywords' is optional and never displayed: it lets an evocative title stay evocative while remaining findable. Leave arrays empty until you have something to add.",
+  "title": "Explorando Universidades Hispanohablantes",
+  "description": "A two-day Spanish 2 research activity: find two universities in the Spanish-speaking world that offer a favored activity or extracurricular, then compile Spanish-language comparative reports with MLA citations.",
+  "url": "https://mistertlibrary.github.io/universidadeshispanohablantes/",
+  "series": "",
+  "course": "Spanish 2",
+  "subjects": [
+    "Culture and Geography",
+    "College and Career"
+  ],
+  "keywords": ["study abroad", "college search", "universities", "Latin America", "Spain", "extracurricular", "Spanish", "MLA"],
+  "sections": [
+    { "title": "Plan de dos días", "anchor": "#plan", "keywords": ["two-day plan"] },
+    { "title": "Descubrir", "anchor": "#descubrir", "keywords": ["discover", "portals", "university list", "enrollment"] },
+    { "title": "Investigar", "anchor": "#investigar", "keywords": ["research", "report", "informe", "citation"] },
+    { "title": "Comparar", "anchor": "#comparar", "keywords": ["compare", "comparisons"] },
+    { "title": "Extensiones", "anchor": "#extensiones", "keywords": ["extensions", "extra credit"] },
+    { "title": "Entregar", "anchor": "#entregar", "keywords": ["turn in", "submit"] }
+  ]
+}
